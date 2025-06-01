@@ -178,52 +178,81 @@
 </section>
 
     <!-- About Section -->
-    <section id="about" class="py-20 bg-gray-100 dark:bg-gray-800">
-      <div class="container mx-auto px-6">
-        <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 reveal">
-          <span class="border-b-4 border-teal-600 dark:border-teal-400 pb-2">About Me</span>
-        </h2>
+    <!-- About Section -->
+<section id="about" class="relative py-20 bg-gray-100 dark:bg-gray-800 overflow-hidden">
+  <!-- Decorative background elements -->
+  <div class="absolute inset-0 opacity-10 dark:opacity-5">
+    <div class="absolute top-0 left-0 w-64 h-64 bg-teal-400 rounded-lg mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
+    <div class="absolute top-0 right-0 w-64 h-64 bg-purple-400 rounded-lg mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
+    <div class="absolute bottom-0 left-1/2 w-64 h-64 bg-pink-400 rounded-lg mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"></div>
+  </div>
+
+  <div class="container mx-auto px-6 relative z-10">
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 reveal">
+      <span class="border-b-4 border-teal-600 dark:border-teal-400 pb-2">About Me</span>
+    </h2>
+    
+    <div class="flex flex-col lg:flex-row gap-8 items-center reveal">
+      <!-- Profile Image (Left Side) -->
+      <div class="lg:w-1/3 flex justify-center bg-white/90 dark:bg-gray-700/90 backdrop-blur-sm p-11 rounded-lg shadow-lg">
+        <div class="w-80 h-80 rounded-full overflow-hidden border-4 border-teal-600 dark:border-teal-400 shadow-lg relative">
+          <img src="store1/anshu.jpg" alt="Profile" class="w-full h-full object-cover">
+          <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/30 dark:to-black/50"></div>
+        </div>
+      </div>
+      
+      <!-- About Content (Right Side) -->
+      <div class="lg:w-2/3 bg-white/90 dark:bg-gray-700/90 backdrop-blur-sm p-8 rounded-lg shadow-lg">
+        <h3 class="text-2xl font-semibold mb-4 text-teal-600 dark:text-teal-400">Who am I?</h3>
+        <div class="space-y-4 text-gray-600 dark:text-gray-300">
+          <p>
+            I'm Anshu Kumar Singh, a passionate Data Scientist with 1+ years of experience in data analysis, machine learning, and building intelligent applications.
+          </p>
+          <p>
+            My journey in tech began during my education, where I developed strong skills in Python, statistics, and data modeling.
+          </p>
+          <p>
+            When I'm not working with data, I enjoy contributing to open source projects and sharing knowledge with the tech community.
+          </p>
+        </div>
         
-        <div class="flex flex-col md:flex-row gap-12 items-center reveal">
-          <div class="md:w-1/3 flex justify-center">
-            <div class="w-64 h-64 rounded-full overflow-hidden border-4 border-teal-600 dark:border-teal-400 shadow-lg">
-              <img src="store1/anshu.jpg" 
-                   alt="About" 
-                   class="w-full h-full object-cover">
+        <!-- Stats Table -->
+        <div class="mt-8">
+          <div class="grid grid-cols-3 gap-4 text-center">
+            <div>
+              <div class="text-2xl font-bold text-teal-600 dark:text-teal-400">1+</div>
+              <div class="text-sm text-gray-500 dark:text-gray-400">Years Experience</div>
+            </div>
+            <div>
+              <div class="text-2xl font-bold text-teal-600 dark:text-teal-400">5+</div>
+              <div class="text-sm text-gray-500 dark:text-gray-400">Projects</div>
+            </div>
+            <div>
+              <div class="text-2xl font-bold text-teal-600 dark:text-teal-400">10+</div>
+              <div class="text-sm text-gray-500 dark:text-gray-400">Clients</div>
             </div>
           </div>
           
-          <div class="md:w-2/3">
-            <h3 class="text-2xl font-semibold mb-4">Who am I?</h3>
-            <p class="text-gray-600 dark:text-gray-300 mb-6">
-              I'm a passionate Data Scientist with 1+ years of experience in data analysis, machine learning, and building intelligent web applications. I combine my analytical skills with full-stack development using JavaScript technologies like React.js,Node.js, Express.js, and MongoDB to bring data-driven ideas to life.
-            </p>
-            <p class="text-gray-600 dark:text-gray-300 mb-6">
-               My journey in tech began during college, where I developed a strong foundation in Python, statistics, and data modeling. Over time, I expanded into web development 
-               to deploy data-powered applications that solve real-world problems.
-            </p>
-            <p class="text-gray-600 dark:text-gray-300 mb-8">
-              When I'm not working with data or coding, I enjoy hiking, reading tech blogs, and contributing to open source projects in the AI and data science community.
-            </p>
-            
-            <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-              <div class="bg-white dark:bg-gray-700 p-4 rounded-lg shadow">
-                <h4 class="font-semibold text-teal-600 dark:text-teal-400">1+</h4>
-                <p class="text-sm text-gray-500 dark:text-gray-400">Years Experience</p>
-              </div>
-              <div class="bg-white dark:bg-gray-700 p-4 rounded-lg shadow">
-                <h4 class="font-semibold text-teal-600 dark:text-teal-400">5+</h4>
-                <p class="text-sm text-gray-500 dark:text-gray-400">Projects Completed</p>
-              </div>
-              <div class="bg-white dark:bg-gray-700 p-4 rounded-lg shadow">
-                <h4 class="font-semibold text-teal-600 dark:text-teal-400">10+</h4>
-                <p class="text-sm text-gray-500 dark:text-gray-400">Happy Clients</p>
-              </div>
-            </div>
+          <!-- Contact Buttons -->
+          <div class="grid grid-cols-3 gap-4 mt-4">
+            <a href="mailto:ansshu.kr.singh@gmail.com?subject=Portfolio%20Inquiry" class="flex items-center justify-center px-4 py-2 border border-teal-600 text-teal-600 hover:bg-teal-600 hover:text-white rounded transition dark:border-teal-400 dark:text-teal-400 text-sm min-w-[100px]">
+            <i class="fas fa-envelope mr-2"></i> 
+              Email
+
+            <a href="https://www.linkedin.com/in/anshu-kumar-singh-70b0b7326" target="_blank" class="flex items-center justify-center px-4 py-2 border border-teal-600 text-teal-600 hover:bg-teal-600 hover:text-white rounded transition dark:border-teal-400 dark:text-teal-400 text-sm min-w-[100px]">
+            <i class="fab fa-linkedin-in mr-2"></i> LinkedIn
+          </a>
+
+            <a href="https://wa.me/918102500498" target="_blank" class="flex items-center justify-center px-4 py-2 border border-teal-600 text-teal-600 hover:bg-teal-600 hover:text-white rounded transition dark:border-teal-400 dark:text-teal-400 text-sm min-w-[100px]">
+            <i class="fab fa-whatsapp mr-2"></i> WhatsApp
+          </a>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
+
 
     <!-- Skills Section -->
     <section id="skills" class="py-20">
@@ -256,7 +285,7 @@
                   <div class="skill-progress" style="width: 90%"></div>
                 </div>
               </div>
-              
+
               <div>
                 <div class="flex justify-between mb-2">
                   <span>Machine Learning</span>
@@ -277,15 +306,7 @@
                 </div>
               </div>
 
-              <div>
-                <div class="flex justify-between mb-2">
-                  <span>Power BI</span>
-                  <span>80%</span>
-                </div>
-                <div class="skill-bar">
-                  <div class="skill-progress" style="width: 80%"></div>
-                </div>
-              </div>
+
               <div>
                 <div class="flex justify-between mb-2">
                   <span>HTML/CSS</span>
@@ -453,6 +474,135 @@
       </div>
     </section>
 
+
+
+    <!-- Certifications Section -->
+    <!-- Certifications Section -->
+<section id="certifications" class="py-20 bg-gradient-to-r from-blue-50 to-teal-50 dark:from-gray-800 dark:to-gray-900">
+  <div class="container mx-auto px-6">
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 reveal">
+      <span class="border-b-4 border-teal-600 dark:border-teal-400 pb-2">Certifications</span>
+    </h2>
+    
+    <div class="certifications-container relative h-96 overflow-hidden reveal">
+      <!-- Rest of your certifications track content remains the same -->
+      <div class="certifications-track absolute top-0 left-0 flex gap-8 h-full items-center">
+        <!-- Certification 1 - Infosys -->
+        <div class="certification-card bg-white dark:bg-gray-700 rounded-lg shadow-lg p-6 w-72 h-72 flex-shrink-0 transform transition-all duration-500 grid place-items-center">
+          <div class="flex flex-col gap-4 items-center text-center">
+            <div class="w-20 h-20 flex-shrink-0 bg-teal-100 dark:bg-teal-900 rounded-full flex items-center justify-center">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Infosys_logo.svg/2560px-Infosys_logo.svg.png" alt="Infosys" class="w-12 h-auto">
+            </div>
+            <div>
+              <h3 class="text-lg font-semibold mb-1">Website Development</h3>
+              <p class="text-sm text-gray-600 dark:text-gray-300 mb-2">Infosys Springboard</p>
+              <p class="text-xs text-gray-500 dark:text-gray-400 mb-3">Completed</p>
+              <div class="flex gap-2 justify-center">
+                <a href="store2/certificate1.jpg.pdf" target="_blank" class="text-xs px-3 py-1 bg-teal-600 hover:bg-teal-700 text-white rounded transition flex items-center">
+                  <i class="fas fa-file-pdf mr-1"></i> PDF
+                </a>
+                <a href="https://verify.onwingspan.com" target="_blank" class="text-xs px-3 py-1 border border-teal-600 text-teal-600 hover:bg-teal-600 hover:text-white rounded transition dark:border-teal-400 dark:text-teal-400 dark:hover:bg-teal-400 dark:hover:text-gray-900 flex items-center">
+                  <i class="fas fa-external-link-alt mr-1"></i> Verify
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Certification 2 - IBM Python -->
+        <div class="certification-card bg-white dark:bg-gray-700 rounded-lg shadow-lg p-6 w-72 h-72 flex-shrink-0 transform transition-all duration-500 grid place-items-center">
+          <div class="flex flex-col gap-4 items-center text-center">
+            <div class="w-20 h-20 flex-shrink-0 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/IBM_logo.svg/2560px-IBM_logo.svg.png" alt="IBM" class="w-12 h-auto">
+            </div>
+            <div>
+              <h3 class="text-lg font-semibold mb-1">Python for Data Science</h3>
+              <p class="text-sm text-gray-600 dark:text-gray-300 mb-2">IBM Cognitive Class</p>
+              <p class="text-xs text-gray-500 dark:text-gray-400 mb-3">Completed: Apr 2024</p>
+              <div class="flex gap-2 justify-center">
+                <a href="store2/certificare2.jpg.pdf" target="_blank" class="text-xs px-3 py-1 bg-teal-600 hover:bg-teal-700 text-white rounded transition flex items-center">
+                  <i class="fas fa-file-pdf mr-1"></i> PDF
+                </a>
+                <a href="https://courses.cognitiveclass.ai/certificates/0eb2a05b867542368f146409640d4308" target="_blank" class="text-xs px-3 py-1 border border-teal-600 text-teal-600 hover:bg-teal-600 hover:text-white rounded transition dark:border-teal-400 dark:text-teal-400 dark:hover:bg-teal-400 dark:hover:text-gray-900 flex items-center">
+                  <i class="fas fa-external-link-alt mr-1"></i> Verify
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Certification 3 - IBM Data Analysis -->
+        <div class="certification-card bg-white dark:bg-gray-700 rounded-lg shadow-lg p-6 w-72 h-72 flex-shrink-0 transform transition-all duration-500 grid place-items-center">
+          <div class="flex flex-col gap-4 items-center text-center">
+            <div class="w-20 h-20 flex-shrink-0 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/IBM_logo.svg/2560px-IBM_logo.svg.png" alt="IBM" class="w-12 h-auto">
+            </div>
+            <div>
+              <h3 class="text-lg font-semibold mb-1">Data Analysis</h3>
+              <p class="text-sm text-gray-600 dark:text-gray-300 mb-2">IBM Cognitive Class</p>
+              <p class="text-xs text-gray-500 dark:text-gray-400 mb-3">Completed</p>
+              <div class="flex gap-2 justify-center">
+                <a href="store2/certificate3.jpg.pdf" target="_blank" class="text-xs px-3 py-1 bg-teal-600 hover:bg-teal-700 text-white rounded transition flex items-center">
+                  <i class="fas fa-file-pdf mr-1"></i> PDF
+                </a>
+                <a href="https://courses.cognitiveclass.ai/certificates/22494de46afa4546b5c516e07a918c79" target="_blank" class="text-xs px-3 py-1 border border-teal-600 text-teal-600 hover:bg-teal-600 hover:text-white rounded transition dark:border-teal-400 dark:text-teal-400 dark:hover:bg-teal-400 dark:hover:text-gray-900 flex items-center">
+                  <i class="fas fa-external-link-alt mr-1"></i> Verify
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Certification 4 - Microsoft Azure AI -->
+        <div class="certification-card bg-white dark:bg-gray-700 rounded-lg shadow-lg p-6 w-72 h-72 flex-shrink-0 transform transition-all duration-500 grid place-items-center">
+          <div class="flex flex-col gap-4 items-center text-center">
+            <div class="w-20 h-20 flex-shrink-0 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Microsoft_logo_%282012%29.svg/2560px-Microsoft_logo_%282012%29.svg.png" alt="Microsoft" class="w-12 h-auto">
+            </div>
+            <div>
+              <h3 class="text-lg font-semibold mb-1">Azure AI Services</h3>
+              <p class="text-sm text-gray-600 dark:text-gray-300 mb-2">Microsoft Learn</p>
+              <p class="text-xs text-gray-500 dark:text-gray-400 mb-3">Completed</p>
+              <div class="flex gap-2 justify-center">
+                <a href="store2/certificate4.jpg.pdf" target="_blank" class="text-xs px-3 py-1 bg-teal-600 hover:bg-teal-700 text-white rounded transition flex items-center">
+                  <i class="fas fa-file-pdf mr-1"></i> PDF
+                </a>
+                <a href="https://learn.microsoft.com/en-us/users/anshukumarsingh-4490/achievements/print/22jgbmx" target="_blank" class="text-xs px-3 py-1 border border-teal-600 text-teal-600 hover:bg-teal-600 hover:text-white rounded transition dark:border-teal-400 dark:text-teal-400 dark:hover:bg-teal-400 dark:hover:text-gray-900 flex items-center">
+                  <i class="fas fa-external-link-alt mr-1"></i> Verify
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Certification 5 - Microsoft ML -->
+        <div class="certification-card bg-white dark:bg-gray-700 rounded-lg shadow-lg p-6 w-72 h-72 flex-shrink-0 transform transition-all duration-500 grid place-items-center">
+          <div class="flex flex-col gap-4 items-center text-center">
+            <div class="w-20 h-20 flex-shrink-0 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Microsoft_logo_%282012%29.svg/2560px-Microsoft_logo_%282012%29.svg.png" alt="Microsoft" class="w-12 h-auto">
+            </div>
+            <div>
+              <h3 class="text-lg font-semibold mb-1">Machine Learning</h3>
+              <p class="text-sm text-gray-600 dark:text-gray-300 mb-2">Microsoft Learn</p>
+              <p class="text-xs text-gray-500 dark:text-gray-400 mb-3">Completed</p>
+              <div class="flex gap-2 justify-center">
+                <a href="store2/certificate5.jpg.pdf" target="_blank" class="text-xs px-3 py-1 bg-teal-600 hover:bg-teal-700 text-white rounded transition flex items-center">
+                  <i class="fas fa-file-pdf mr-1"></i> PDF
+                </a>
+                <a href="https://learn.microsoft.com/en-us/users/anshukumarsingh-4490/achievements/print/w7ab593n" target="_blank" class="text-xs px-3 py-1 border border-teal-600 text-teal-600 hover:bg-teal-600 hover:text-white rounded transition dark:border-teal-400 dark:text-teal-400 dark:hover:bg-teal-400 dark:hover:text-gray-900 flex items-center">
+                  <i class="fas fa-external-link-alt mr-1"></i> Verify
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
     <!-- Contact Section -->
     <section id="contact" class="py-20">
       <div class="container mx-auto px-6">
@@ -502,18 +652,32 @@
             <div class="mt-8">
               <h4 class="font-semibold mb-4">Follow Me</h4>
               <div class="flex gap-4">
-                <a href="#" class="w-10 h-10 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center text-gray-700 dark:text-gray-300 hover:bg-teal-600 hover:text-white transition">
+
+                <!-- For GitHub -->
+                <a href="https://github.com/anshu1207" 
+                class="w-10 h-10 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center text-gray-700 dark:text-gray-300 hover:bg-teal-600 hover:text-white transition">
                   <i class="fab fa-github"></i>
                 </a>
-                <a href="#" class="w-10 h-10 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center text-gray-700 dark:text-gray-300 hover:bg-teal-600 hover:text-white transition">
+
+                <!-- For Linkedin -->
+                <a href="https://www.linkedin.com/in/anshu-kumar-singh-70b0b7326" 
+                class="w-10 h-10 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center text-gray-700 dark:text-gray-300 hover:bg-teal-600 hover:text-white transition">
                   <i class="fab fa-linkedin-in"></i>
                 </a>
-                <a href="#" class="w-10 h-10 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center text-gray-700 dark:text-gray-300 hover:bg-teal-600 hover:text-white transition">
+
+                <!-- For twitter -->
+                <a href="https://twitter.com/rajput_anshu_" 
+                class="w-10 h-10 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center text-gray-700 dark:text-gray-300 hover:bg-teal-600 hover:text-white transition">
                   <i class="fab fa-twitter"></i>
                 </a>
-                <a href="#" class="w-10 h-10 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center text-gray-700 dark:text-gray-300 hover:bg-teal-600 hover:text-white transition">
+
+                <!-- For Instagram -->
+                <a href="https://www.instagram.com/rajput_.anshu._" 
+                class="w-10 h-10 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center text-gray-700 dark:text-gray-300 hover:bg-teal-600 hover:text-white transition">
+
                   <i class="fab fa-instagram"></i>
                 </a>
+                
               </div>
             </div>
           </div>
@@ -554,18 +718,39 @@
     <footer class="py-8 bg-gray-100 dark:bg-gray-800">
       <div class="container mx-auto px-6 text-center">
         <div class="flex justify-center gap-6 mb-6">
-          <a href="#" class="text-gray-600 hover:text-teal-600 dark:text-gray-300 dark:hover:text-teal-400 transition">
+
+
+          <a href="https://github.com/anshu1207" 
+          class="text-gray-600 hover:text-teal-600 dark:text-gray-300 dark:hover:text-teal-400 transition">
             <i class="fab fa-github text-xl"></i>
           </a>
-          <a href="#" class="text-gray-600 hover:text-teal-600 dark:text-gray-300 dark:hover:text-teal-400 transition">
+
+
+          <a href="https://www.linkedin.com/in/anshu-kumar-singh-70b0b7326" 
+          class="text-gray-600 hover:text-teal-600 dark:text-gray-300 dark:hover:text-teal-400 transition">
             <i class="fab fa-linkedin-in text-xl"></i>
           </a>
-          <a href="#" class="text-gray-600 hover:text-teal-600 dark:text-gray-300 dark:hover:text-teal-400 transition">
+
+
+          <a href="https://twitter.com/rajput_anshu_" 
+          class="text-gray-600 hover:text-teal-600 dark:text-gray-300 dark:hover:text-teal-400 transition">
             <i class="fab fa-twitter text-xl"></i>
           </a>
-          <a href="#" class="text-gray-600 hover:text-teal-600 dark:text-gray-300 dark:hover:text-teal-400 transition">
+
+
+          <a href="https://www.instagram.com/rajput_.anshu._" 
+          class="text-gray-600 hover:text-teal-600 dark:text-gray-300 dark:hover:text-teal-400 transition">
             <i class="fab fa-instagram text-xl"></i>
           </a>
+
+          <a href="https://wa.me/918102500498" 
+   target="_blank"
+   rel="noopener noreferrer"
+   class="text-gray-600 hover:text-teal-600 dark:text-gray-300 dark:hover:text-teal-400 transition">
+  <i class="fab fa-whatsapp text-xl"></i>
+</a>
+
+
         </div>
         <p class="text-gray-600 dark:text-gray-300">
           &copy; 2025 Anshu. All rights reserved.
